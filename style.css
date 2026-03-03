@@ -18,3 +18,49 @@ body {
 .movie-card:hover {
   background-color: var(--netflix-hover);
 }
+
+.nf-arrow{
+  position:absolute;
+  top:55%;
+  transform:translateY(-50%);
+  width:50px;
+  height:80px;
+  background:rgba(0,0,0,0.6);
+  color:#fff;
+  border:none;
+  font-size:2rem;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  z-index:5;
+  transition:background .2s ease;
+}
+
+.nf-arrow:hover{
+  background:rgba(0,0,0,0.9);
+}
+
+.nf-prev{ left:0; }
+.nf-next{ right:0; }
+
+/* stato iniziale: “nascosta” */
+.nf-section {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+
+/* quando entra nello schermo */
+.nf-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* accessibilità: se l’utente disattiva le animazioni */
+@media (prefers-reduced-motion: reduce) {
+  .nf-section {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
