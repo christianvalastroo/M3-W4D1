@@ -56,7 +56,6 @@ body {
   transform: translateY(0);
 }
 
-/* accessibilità: se l’utente disattiva le animazioni */
 @media (prefers-reduced-motion: reduce) {
   .nf-section {
     opacity: 1;
