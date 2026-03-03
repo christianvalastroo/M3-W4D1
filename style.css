@@ -63,3 +63,44 @@ body {
     transition: none;
   }
 }
+
+.nf-footer{
+  color:#b3b3b3;
+}
+
+.nf-social{
+  color:#b3b3b3;
+  font-size:1.2rem;
+  text-decoration:none;
+}
+
+.nf-social:hover{
+  color:#fff;
+}
+
+.nf-link{
+  color:#b3b3b3;
+  text-decoration:none;
+  font-size:.85rem;
+}
+
+.nf-link:hover{
+  text-decoration:underline;
+}
+
+.nf-service-btn{
+  border:1px solid #b3b3b3;
+  color:#b3b3b3;
+  background:transparent;
+  font-size:.8rem;
+  padding:4px 12px;
+}
+
+.nf-service-btn:hover{
+  border-color:#fff;
+  color:#fff;
+}
+
+.nf-copy{
+  color:#808080;
+}
