@@ -1,0 +1,20 @@
+:root {
+  --netflix-bg: #141414;
+  --netflix-red: #e50914;
+  --netflix-text-primary: #ffffff;
+  --netflix-text-secondary: #b3b3b3;
+  --netflix-hover: #2a2a2a;
+}
+
+body {
+    background-color: var(--netflix-bg);
+    color: var(--netflix-text-primary);
+}
+
+.navbar {
+    background-color: var(--netflix-bg);
+}
+
+.movie-card:hover {
+  background-color: var(--netflix-hover);
+}
