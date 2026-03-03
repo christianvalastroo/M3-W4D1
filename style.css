@@ -11,6 +11,7 @@ body {
     color: var(--netflix-text-primary);
 }
 
+/* NAVBAR */
 .navbar {
     background-color: var(--netflix-bg);
 }
@@ -19,6 +20,7 @@ body {
   background-color: var(--netflix-hover);
 }
 
+/* Frecce Carousel */
 .nf-arrow{
   position:absolute;
   top:55%;
@@ -64,6 +66,7 @@ body {
   }
 }
 
+/* FOOTER */
 .nf-footer{
   color:#b3b3b3;
 }
