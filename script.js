@@ -31,4 +31,11 @@ document.querySelectorAll("section").forEach(section => {
     });
 
   });
-  
+
+// navbar toglle //
+const toggle = document.getElementById("nfToggle")
+const navbar = document.querySelector(".navbar")
+
+toggle.addEventListener("click", () => {
+  navbar.classList.toggle("open")
+})

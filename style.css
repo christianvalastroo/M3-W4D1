@@ -107,3 +107,54 @@ body {
 .nf-copy{
   color:#808080;
 }
+
+/* HAMBURGER MENU */
+
+.nf-toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nf-toggle span {
+  display: block;
+  background: var(--netflix-text-primary);
+  width: 25px;
+  height: 2px;
+  border-radius: 999px;
+  transition: transform .25s ease, opacity .2s ease;
+}
+
+  /* menu chiuso di default su mobile */
+@media (max-width: 991.98px) {
+  #mainNavbar {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: max-height .35s ease, opacity .25s ease, transform .25s ease;
+  }
+
+  .navbar.open #mainNavbar {
+    max-height: 420px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* hamburger -> X */
+  .navbar.open .nf-toggle span:nth-child(1) {
+    transform: translateY(5.5px) rotate(45deg);
+  }
+
+  .navbar.open .nf-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .navbar.open .nf-toggle span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
