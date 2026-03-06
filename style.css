@@ -7,21 +7,23 @@
 }
 
 body {
-    background-color: var(--netflix-bg);
-    color: var(--netflix-text-primary);
+  background-color: var(--netflix-bg);
+  color: var(--netflix-text-primary);
 }
 
 /* NAVBAR */
 .navbar {
-    background-color: var(--netflix-bg);
+  background-color: var(--netflix-bg);
 }
 
+/* IMMAGINI */
 img {
   border-radius: 5px;
 }
 
+/* CARD FILM */
 .nf-card {
-  transition: transform .25s ease;
+  transition: transform 0.25s ease;
 }
 
 .nf-card:hover {
@@ -29,65 +31,70 @@ img {
 }
 
 /* DROPDOWN CUSTOM */
-.nf-dropdown{
+.dropdown {
+  position: relative;
+}
+
+.nf-dropdown {
   background-color: var(--netflix-bg);
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
   padding: 8px;
   min-width: 180px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  z-index: 1050;
 }
 
-.nf-dropdown .dropdown-item{
+.nf-dropdown .dropdown-item {
   color: var(--netflix-text-primary);
   font-size: 14px;
   padding: 10px 14px;
   border-radius: 8px;
-  transition: background .2s ease;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
-.nf-dropdown .dropdown-item:hover{
+.nf-dropdown .dropdown-item:hover,
+.nf-dropdown .dropdown-item:focus {
   background-color: var(--netflix-hover);
   color: var(--netflix-text-primary);
 }
 
-.nf-dropdown .dropdown-divider{
-  border-color: rgba(255,255,255,0.08);
+.nf-dropdown .dropdown-divider {
+  border-color: rgba(255, 255, 255, 0.08);
   margin: 6px 0;
 }
 
-/* Frecce Carousel */
-.nf-arrow{
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%);
-  width:48px;
-  height:96px;
+/* FRECCE CAROUSEL */
+.nf-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 96px;
   background: var(--netflix-bg);
   color: var(--netflix-text-primary);
-  border:none;
-  font-size:1.7rem;
-  align-items:center;
-  justify-content:center;
-  cursor:pointer;
-  z-index:5;
-  transition:background .2s ease, opacity .2s ease;
+  border: none;
+  font-size: 1.7rem;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 5;
+  transition: background 0.2s ease, opacity 0.2s ease;
   touch-action: manipulation;
 }
 
-.nf-arrow:hover{
-  background:var(--netflix-bg);
+.nf-arrow:hover {
+  background: var(--netflix-bg);
 }
 
-.nf-prev{ left:0; }
-.nf-next{ right:0; }
-
 .nf-prev {
-  background: linear-gradient(to right, rgba(20,20,20,0.95), rgba(20,20,20,0.05));
+  left: 0;
+  background: linear-gradient(to right, rgba(20, 20, 20, 0.95), rgba(20, 20, 20, 0.05));
 }
 
 .nf-next {
-  background: linear-gradient(to left, rgba(20,20,20,0.95), rgba(20,20,20,0.05));
+  right: 0;
+  background: linear-gradient(to left, rgba(20, 20, 20, 0.95), rgba(20, 20, 20, 0.05));
 }
 
 .nf-arrow.is-hidden {
@@ -95,15 +102,14 @@ img {
   pointer-events: none;
 }
 
-/* stato iniziale: “nascosta” */
+/* SEZIONI ANIMATE */
 .nf-section {
   position: relative;
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity .6s ease, transform .6s ease;
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-/* quando entra nello schermo */
 .nf-section.is-visible {
   opacity: 1;
   transform: translateY(0);
@@ -118,51 +124,50 @@ img {
 }
 
 /* FOOTER */
-.nf-footer{
-  color:var(--netflix-text-secondary);
+.nf-footer {
+  color: var(--netflix-text-secondary);
 }
 
-.nf-social{
-  color:var(--netflix-text-secondary);
-  font-size:1.2rem;
-  text-decoration:none;
+.nf-social {
+  color: var(--netflix-text-secondary);
+  font-size: 1.2rem;
+  text-decoration: none;
 }
 
-.nf-social:hover{
-  color:var(--netflix-text-primary);
+.nf-social:hover {
+  color: var(--netflix-text-primary);
 }
 
-.nf-link{
-  color:var(--netflix-text-secondary);
-  text-decoration:none;
-  font-size:.85rem;
+.nf-link {
+  color: var(--netflix-text-secondary);
+  text-decoration: none;
+  font-size: 0.85rem;
 }
 
-.nf-link:hover{
-  text-decoration:underline;
+.nf-link:hover {
+  text-decoration: underline;
 }
 
-.nf-service-btn{
-  border:1px solid var(--netflix-text-secondary);
-  color:var(--netflix-text-secondary);
-  background:transparent;
-  font-size:.8rem;
-  padding:4px 12px;
+.nf-service-btn {
+  border: 1px solid var(--netflix-text-secondary);
+  color: var(--netflix-text-secondary);
+  background: transparent;
+  font-size: 0.8rem;
+  padding: 4px 12px;
 }
 
-.nf-service-btn:hover{
-  border-color:var(--netflix-text-primary);
-  color:var(--netflix-text-primary);
+.nf-service-btn:hover {
+  border-color: var(--netflix-text-primary);
+  color: var(--netflix-text-primary);
 }
 
-.nf-copy{
-  color:#808080;
+.nf-copy {
+  color: #808080;
 }
 
 /* HAMBURGER MENU */
-
 .nf-toggle {
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 5px;
   background: none;
@@ -176,21 +181,20 @@ img {
   width: 25px;
   height: 2px;
   border-radius: 999px;
-  transition: transform .25s ease, opacity .2s ease;
+  transition: transform 0.25s ease, opacity 0.2s ease;
 }
 
-/* HAMBURGER: Nascosto di default */
-.nf-toggle {
-  display: none;
-}
-
-  /* menu chiuso di default su mobile */
+/* MOBILE */
 @media (max-width: 991.98px) {
+  .nf-toggle {
+    display: flex;
+  }
 
-    /* HAMBURGER: Nascosto di default */
-.nf-toggle {
-  display: flex;
-}
+  .nf-dropdown {
+    position: static !important;
+    width: 100%;
+    margin-top: 8px;
+  }
 
   #mainNavbar {
     width: 100%;
@@ -198,16 +202,17 @@ img {
     overflow: hidden;
     opacity: 0;
     transform: translateY(-8px);
-    transition: max-height .35s ease, opacity .25s ease, transform .25s ease;
+    transition: max-height 0.35s ease, opacity 0.25s ease, transform 0.25s ease;
   }
 
   .navbar.open #mainNavbar {
     max-height: 420px;
     opacity: 1;
     transform: translateY(0);
+    overflow: visible;
   }
 
-  /* hamburger -> X */
+  /* HAMBURGER -> X */
   .navbar.open .nf-toggle span:nth-child(1) {
     transform: translateY(7px) rotate(45deg);
   }
@@ -215,7 +220,7 @@ img {
   .navbar.open .nf-toggle span:nth-child(2) {
     opacity: 0;
   }
-  
+
   .navbar.open .nf-toggle span:nth-child(3) {
     transform: translateY(-7px) rotate(-45deg);
   }
