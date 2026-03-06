@@ -28,6 +28,34 @@ img {
   transform: scale(1.08);
 }
 
+/* DROPDOWN CUSTOM */
+.nf-dropdown{
+  background-color: #181818;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 8px;
+  min-width: 180px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+}
+
+.nf-dropdown .dropdown-item{
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  transition: background .2s ease;
+}
+
+.nf-dropdown .dropdown-item:hover{
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+.nf-dropdown .dropdown-divider{
+  border-color: rgba(255,255,255,0.08);
+  margin: 6px 0;
+}
+
 /* Frecce Carousel */
 .nf-arrow{
   position:absolute;
