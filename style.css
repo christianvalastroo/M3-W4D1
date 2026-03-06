@@ -174,7 +174,7 @@ body {
 
   /* hamburger -> X */
   .navbar.open .nf-toggle span:nth-child(1) {
-    transform: translateY(5.5px) rotate(45deg);
+    transform: translateY(7px) rotate(45deg);
   }
 
   .navbar.open .nf-toggle span:nth-child(2) {
@@ -182,6 +182,6 @@ body {
   }
   
   .navbar.open .nf-toggle span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-7px) rotate(-45deg);
   }
 }
