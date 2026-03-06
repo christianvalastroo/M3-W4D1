@@ -23,30 +23,45 @@ body {
 /* Frecce Carousel */
 .nf-arrow{
   position:absolute;
-  top:55%;
+  top:50%;
   transform:translateY(-50%);
-  width:50px;
-  height:80px;
-  background:rgba(0,0,0,0.6);
+  width:48px;
+  height:96px;
+  background:rgba(0,0,0,0.55);
   color:#fff;
   border:none;
-  font-size:2rem;
+  font-size:1.7rem;
   align-items:center;
   justify-content:center;
   cursor:pointer;
   z-index:5;
-  transition:background .2s ease;
+  transition:background .2s ease, opacity .2s ease;
+  touch-action: manipulation;
 }
 
 .nf-arrow:hover{
-  background:rgba(0,0,0,0.9);
+  background:rgba(0, 0, 0, 0.615);
 }
 
 .nf-prev{ left:0; }
 .nf-next{ right:0; }
 
+.nf-prev {
+  background: linear-gradient(to right, rgba(20,20,20,0.95), rgba(20,20,20,0.05));
+}
+
+.nf-next {
+  background: linear-gradient(to left, rgba(20,20,20,0.95), rgba(20,20,20,0.05));
+}
+
+.nf-arrow.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
 /* stato iniziale: “nascosta” */
 .nf-section {
+  position: relative;
   opacity: 0;
   transform: translateY(24px);
   transition: opacity .6s ease, transform .6s ease;
@@ -128,8 +143,20 @@ body {
   transition: transform .25s ease, opacity .2s ease;
 }
 
+/* HAMBURGER: Nascosto di default */
+.nf-toggle {
+  display: none;
+}
+
+
   /* menu chiuso di default su mobile */
 @media (max-width: 991.98px) {
+
+    /* HAMBURGER: Nascosto di default */
+.nf-toggle {
+  display: flex;
+}
+
   #mainNavbar {
     width: 100%;
     max-height: 0;

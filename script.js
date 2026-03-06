@@ -22,6 +22,16 @@ document.querySelectorAll("section").forEach(section => {
 
     if(!strip || !prev || !next) return;
 
+    const updateArrows = () => {
+      const maxScrollLeft = strip.scrollWidth - strip.clientWidth;
+      const tolerance = 4;
+      const atStart = strip.scrollLeft <= tolerance;
+      const atEnd = strip.scrollLeft >= (maxScrollLeft - tolerance);
+
+      prev.classList.toggle("is-hidden", atStart);
+      next.classList.toggle("is-hidden", atEnd || maxScrollLeft <= 0);
+    };
+
     next.addEventListener("click", () => {
       strip.scrollBy({ left: strip.clientWidth, behavior: "smooth" });
     });
@@ -30,6 +40,9 @@ document.querySelectorAll("section").forEach(section => {
       strip.scrollBy({ left: -strip.clientWidth, behavior: "smooth" });
     });
 
+    strip.addEventListener("scroll", updateArrows, { passive: true });
+    window.addEventListener("resize", updateArrows);
+    updateArrows();
   });
 
 // navbar toglle //
