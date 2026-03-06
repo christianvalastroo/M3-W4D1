@@ -16,8 +16,16 @@ body {
     background-color: var(--netflix-bg);
 }
 
-.movie-card:hover {
-  background-color: var(--netflix-hover);
+img {
+  border-radius: 5px;
+}
+
+.nf-card {
+  transition: transform .25s ease;
+}
+
+.nf-card:hover {
+  transform: scale(1.08);
 }
 
 /* Frecce Carousel */
